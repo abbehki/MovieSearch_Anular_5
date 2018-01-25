@@ -1,0 +1,11 @@
+<p>
+  home works!({{Numbers}})
+</p>
+<form>
+<input type="button" [value]="bntTxt" (click)="additem()">
+<input type="text" name="Text" placeholder="Enter here...." [(ngModel)]="goalLife"/>
+</form>
+<br><p>{{goalLife}}</p>
+  <p *ngFor="let goal of goals">
+    {{goal}}
+  </p>
