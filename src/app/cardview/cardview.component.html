@@ -1,0 +1,19 @@
+<div class="cardview-component">
+  <div class="card-content">
+    <div class="movie-logo-detail">
+      <img   [src]="'https://image.tmdb.org/t/p/w500'+ movielist.poster_path" alt="[N/A]"  class="movie-logo"/>
+      <div class="movie-detail">
+        <div class="movies-name">{{movielist.original_title}}</div>
+        <div class="movie-rating">
+          <div class="rating-text">Rated :</div>
+          <div class="rating"> {{movielist.vote_average}}</div>
+        </div>
+        <div class="movie-rating">
+          <div class="rating-text">Released on :</div>
+          <div class="rating"> {{movielist.release_date}}</div>
+        </div>
+      </div>
+    </div>
+    <div [title]="movielist.overview" class="movie-info">{{movielist.overview}}</div>
+  </div>
+</div>
