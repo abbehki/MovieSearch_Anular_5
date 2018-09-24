@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from "@angular/core";
+import { DataService } from "../data.service";
 
 @Component({
   selector: "app-cardview",
@@ -8,7 +9,12 @@ import { Component, OnInit, Input } from "@angular/core";
 export class CardviewComponent implements OnInit {
   @Input()
   movielist: Array<string>;
-  constructor() {}
+  constructor(private data: DataService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
+  onClickcardview(id:number){
+    this.data.changeId(id);
+    window.scroll(0,0);
+  }
 }

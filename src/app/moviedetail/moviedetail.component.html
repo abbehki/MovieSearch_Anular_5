@@ -1,3 +1,9 @@
-<p>
-  moviedetail works!
-</p>
+<div *ngIf="moviedetail" class="moviedetail-component">
+  <div class="movie-detail-header">
+    <div class="movie-title">{{moviedetail.original_title}}</div>
+    <span>({{moviedetail.status}})</span>
+  </div>
+  <img [src]="'https://image.tmdb.org/t/p/w500'+ moviedetail.poster_path" alt="[N/A]" class="movie-image" />
+  <p>{{moviedetail.overview}}</p>
+  <div *ngIf="moviedetail.budget!==0" class="budget"><span class="budget-text">Budget :</span> $ {{moviedetail.budget}}</div>
+</div>
